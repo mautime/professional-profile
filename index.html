@@ -1,10 +1,22 @@
-<html>
-  <head>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/filipelinhares/ress/master/dist/ress.min.css">
-  <style>
-    @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,500,500i,600,600i,700,700i |Cormorant+SC:400,500,600,700');
+<html lang="en"><head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+
+  <title>CodePen - Slider transitions</title>
+  
+  
+  <link rel="stylesheet" href="https://cdn.rawgit.com/filipelinhares/ress/master/dist/ress.min.css">
+  
+<style>
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,500,500i,600,600i,700,700i |Cormorant+SC:400,500,600,700');
 
 /* ====================================
 General Styles
@@ -231,10 +243,6 @@ p.paragraph {
   float: left;
 }
 .swiper-container-vertical > .swiper-wrapper {
-  -webkit-box-orient: vertical;
-  -moz-box-orient: vertical;
-  -ms-flex-direction: column;
-  -webkit-flex-direction: column;
   flex-direction: column;
 }
 .swiper-wrapper {
@@ -242,39 +250,19 @@ p.paragraph {
   width: 100%;
   height: 100%;
   z-index: 1;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
-  -webkit-transition-property: -webkit-transform;
-  -moz-transition-property: -moz-transform;
-  -o-transition-property: -o-transform;
-  -ms-transition-property: -ms-transform;
   transition-property: transform;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
 .swiper-container-android .swiper-slide, .swiper-wrapper {
-  -webkit-transform: translate3d(0px, 0, 0);
-  -moz-transform: translate3d(0px, 0, 0);
-  -o-transform: translate(0px, 0px);
-  -ms-transform: translate3d(0px, 0, 0);
   transform: translate3d(0px, 0, 0);
 }
 .swiper-container-multirow > .swiper-wrapper {
   -webkit-box-lines: multiple;
   -moz-box-lines: multiple;
-  -ms-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 .swiper-container-free-mode > .swiper-wrapper {
-  -webkit-transition-timing-function: ease-out;
-  -moz-transition-timing-function: ease-out;
-  -ms-transition-timing-function: ease-out;
-  -o-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
   margin: 0 auto;
 }
@@ -295,14 +283,7 @@ p.paragraph {
   height: auto;
 }
 .swiper-container-autoheight .swiper-wrapper {
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  -webkit-align-items: flex-start;
   align-items: flex-start;
-  -webkit-transition-property: -webkit-transform, height;
-  -moz-transition-property: -moz-transform;
-  -o-transition-property: -o-transform;
-  -ms-transition-property: -ms-transform;
   transition-property: transform, height;
 }
 /* a11y */
@@ -316,11 +297,9 @@ p.paragraph {
 }
 /* IE10 Windows Phone 8 Fixes */
 .swiper-wp8-horizontal {
-  -ms-touch-action: pan-y;
   touch-action: pan-y;
 }
 .swiper-wp8-vertical {
-  -ms-touch-action: pan-x;
   touch-action: pan-x;
 }
 /* Arrows */
@@ -332,8 +311,6 @@ p.paragraph {
   margin-top: -22px;
   z-index: 10;
   cursor: pointer;
-  -moz-background-size: 27px 44px;
-  -webkit-background-size: 27px 44px;
   background-size: 27px 44px;
   background-position: center;
   background-repeat: no-repeat;
@@ -374,13 +351,7 @@ p.paragraph {
 .swiper-pagination {
   position: absolute;
   text-align: center;
-  -webkit-transition: 300ms;
-  -moz-transition: 300ms;
-  -o-transition: 300ms;
   transition: 300ms;
-  -webkit-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   z-index: 10;
 }
@@ -409,7 +380,6 @@ button.swiper-pagination-bullet {
   padding: 0;
   box-shadow: none;
   -moz-appearance: none;
-  -ms-appearance: none;
   -webkit-appearance: none;
   appearance: none;
 }
@@ -454,21 +424,10 @@ button.swiper-pagination-bullet {
   top: 0;
   width: 100%;
   height: 100%;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  -o-transform: scale(0);
   transform: scale(0);
-  -webkit-transform-origin: left top;
-  -moz-transform-origin: left top;
-  -ms-transform-origin: left top;
-  -o-transform-origin: left top;
   transform-origin: left top;
 }
 .swiper-container-rtl .swiper-pagination-progress .swiper-pagination-progressbar {
-  -webkit-transform-origin: right top;
-  -moz-transform-origin: right top;
-  -ms-transform-origin: right top;
-  -o-transform-origin: right top;
   transform-origin: right top;
 }
 .swiper-container-horizontal > .swiper-pagination-progress {
@@ -494,8 +453,6 @@ button.swiper-pagination-bullet {
 }
 /* 3D Container */
 .swiper-container-3d {
-  -webkit-perspective: 1200px;
-  -moz-perspective: 1200px;
   -o-perspective: 1200px;
   perspective: 1200px;
 }
@@ -506,9 +463,6 @@ button.swiper-pagination-bullet {
 .swiper-container-3d .swiper-slide-shadow-top,
 .swiper-container-3d .swiper-slide-shadow-bottom,
 .swiper-container-3d .swiper-cube-shadow {
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 .swiper-container-3d .swiper-slide-shadow-left,
@@ -524,31 +478,9 @@ button.swiper-pagination-bullet {
   z-index: 10;
 }
 .swiper-container-3d .swiper-slide-shadow-left {
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(rgba(0, 0, 0, 0.5)),
-    to(rgba(0, 0, 0, 0))
-  );
   /* Safari 4+, Chrome */
-  background-image: -webkit-linear-gradient(
-    right,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0)
-  );
   /* Chrome 10+, Safari 5.1+, iOS 5+ */
-  background-image: -moz-linear-gradient(
-    right,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0)
-  );
   /* Firefox 3.6-15 */
-  background-image: -o-linear-gradient(
-    right,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0)
-  );
   /* Opera 11.10-12.00 */
   background-image: linear-gradient(
     to left,
@@ -558,31 +490,9 @@ button.swiper-pagination-bullet {
   /* Firefox 16+, IE10, Opera 12.50+ */
 }
 .swiper-container-3d .swiper-slide-shadow-right {
-  background-image: -webkit-gradient(
-    linear,
-    right top,
-    left top,
-    from(rgba(0, 0, 0, 0.5)),
-    to(rgba(0, 0, 0, 0))
-  );
   /* Safari 4+, Chrome */
-  background-image: -webkit-linear-gradient(
-    left,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0)
-  );
   /* Chrome 10+, Safari 5.1+, iOS 5+ */
-  background-image: -moz-linear-gradient(
-    left,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0)
-  );
   /* Firefox 3.6-15 */
-  background-image: -o-linear-gradient(
-    left,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0)
-  );
   /* Opera 11.10-12.00 */
   background-image: linear-gradient(
     to right,
@@ -592,31 +502,9 @@ button.swiper-pagination-bullet {
   /* Firefox 16+, IE10, Opera 12.50+ */
 }
 .swiper-container-3d .swiper-slide-shadow-top {
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(rgba(0, 0, 0, 0.5)),
-    to(rgba(0, 0, 0, 0))
-  );
   /* Safari 4+, Chrome */
-  background-image: -webkit-linear-gradient(
-    bottom,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0)
-  );
   /* Chrome 10+, Safari 5.1+, iOS 5+ */
-  background-image: -moz-linear-gradient(
-    bottom,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0)
-  );
   /* Firefox 3.6-15 */
-  background-image: -o-linear-gradient(
-    bottom,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0)
-  );
   /* Opera 11.10-12.00 */
   background-image: linear-gradient(
     to top,
@@ -626,31 +514,9 @@ button.swiper-pagination-bullet {
   /* Firefox 16+, IE10, Opera 12.50+ */
 }
 .swiper-container-3d .swiper-slide-shadow-bottom {
-  background-image: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    from(rgba(0, 0, 0, 0.5)),
-    to(rgba(0, 0, 0, 0))
-  );
   /* Safari 4+, Chrome */
-  background-image: -webkit-linear-gradient(
-    top,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0)
-  );
   /* Chrome 10+, Safari 5.1+, iOS 5+ */
-  background-image: -moz-linear-gradient(
-    top,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0)
-  );
   /* Firefox 3.6-15 */
-  background-image: -o-linear-gradient(
-    top,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0)
-  );
   /* Opera 11.10-12.00 */
   background-image: linear-gradient(
     to bottom,
@@ -672,8 +538,6 @@ button.swiper-pagination-bullet {
 .swiper-container-cube .swiper-slide, .swiper-container-flip .swiper-slide {
   pointer-events: none;
   -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
   backface-visibility: hidden;
   z-index: 1;
 }
@@ -697,24 +561,16 @@ button.swiper-pagination-bullet {
 .swiper-container-flip .swiper-slide-shadow-right {
   z-index: 0;
   -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 /* Cube */
 .swiper-container-cube .swiper-slide {
   visibility: hidden;
-  -webkit-transform-origin: 0 0;
-  -moz-transform-origin: 0 0;
-  -ms-transform-origin: 0 0;
   transform-origin: 0 0;
   width: 100%;
   height: 100%;
 }
 .swiper-container-cube.swiper-container-rtl .swiper-slide {
-  -webkit-transform-origin: 100% 0;
-  -moz-transform-origin: 100% 0;
-  -ms-transform-origin: 100% 0;
   transform-origin: 100% 0;
 }
 .swiper-container-cube .swiper-slide-active,
@@ -732,23 +588,15 @@ button.swiper-pagination-bullet {
   height: 100%;
   background: #000;
   opacity: 0.6;
-  -webkit-filter: blur(50px);
   filter: blur(50px);
   z-index: 0;
 }
 /* Fade */
 .swiper-container-fade.swiper-container-free-mode .swiper-slide {
-  -webkit-transition-timing-function: ease-out;
-  -moz-transition-timing-function: ease-out;
-  -ms-transition-timing-function: ease-out;
-  -o-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
 .swiper-container-fade .swiper-slide {
   pointer-events: none;
-  -webkit-transition-property: opacity;
-  -moz-transition-property: opacity;
-  -o-transition-property: opacity;
   transition-property: opacity;
 }
 .swiper-container-fade .swiper-slide .swiper-slide {
@@ -761,20 +609,8 @@ button.swiper-pagination-bullet {
 .swiper-zoom-container {
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
   align-items: center;
   text-align: center;
 }
@@ -783,7 +619,8 @@ button.swiper-pagination-bullet {
 .swiper-zoom-container > canvas {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 /* Scrollbar */
 .swiper-scrollbar {
@@ -830,11 +667,8 @@ button.swiper-pagination-bullet {
   margin-left: -21px;
   margin-top: -21px;
   z-index: 10;
-  -webkit-transform-origin: 50%;
-  -moz-transform-origin: 50%;
   transform-origin: 50%;
   -webkit-animation: swiper-preloader-spin 1s steps(12, end) infinite;
-  -moz-animation: swiper-preloader-spin 1s steps(12, end) infinite;
   animation: swiper-preloader-spin 1s steps(12, end) infinite;
 }
 .swiper-lazy-preloader:after {
@@ -844,7 +678,6 @@ button.swiper-pagination-bullet {
   height: 100%;
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%236c6c6c'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
   background-position: 50%;
-  -webkit-background-size: 100%;
   background-size: 100%;
   background-repeat: no-repeat;
 }
@@ -861,25 +694,53 @@ button.swiper-pagination-bullet {
     transform: rotate(360deg);
   }
 }
+</style>
 
-  </style>
+  <script>
+  window.console = window.console || function(t) {};
+</script>
 
-  </head>
-  <body>
-    <!-- Page Wrap -->
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
+  <!-- Page Wrap -->
 <div class="page-wrap">
 
   <div id="home-slider">
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide swiper-slide-one">
-          <div class="swiper-image" data-swiper-parallax-y="-20%">
+    <div class="swiper-container swiper-container-vertical" style="cursor: grab;">
+      <div class="swiper-wrapper" style="transform: translate3d(0px, -394px, 0px); transition-duration: 0ms;"><div class="swiper-slide swiper-slide-three swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="2" style="height: 394px;">
+          <div class="swiper-image" data-swiper-parallax-y="-20%" style="transform: translate3d(0px, -20%, 0px); transition-duration: 0ms;">
+            <div class="swiper-image-inner swiper-image-left swiper-image-five">
+              <h1>A <span class="emphasis">Sense</span>. <br><span>Of Things to Come.</span></h1>
+              <p>Chapter III, page XI</p>
+            </div>
+          </div>
+          <div class="swiper-image" data-swiper-parallax-y="35%" style="transform: translate3d(0px, 35%, 0px); transition-duration: 0ms;">
+            <div class="swiper-image-inner swiper-image-right swiper-image-six">
+              <p class="paragraph">
+                Every man carries Two Bags about with him, one in front and one behind, and both are packed full of faults. The Bag in front contains his neighbours’ faults, the one behind his own. Hence it is that men do not see their own faults, but never fail to see
+                those of others.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide swiper-slide-one swiper-slide-active" data-swiper-slide-index="0" style="height: 394px;">
+          <div class="swiper-image" data-swiper-parallax-y="-20%" style="transform: translate3d(0px, 0%, 0px); transition-duration: 0ms;">
             <div class="swiper-image-inner swiper-image-left swiper-image-one">
               <h1>A <span class="emphasis">Breath</span>. <br><span>Of Fresh Air.</span></h1>
               <p>Chapter I, page XV</p>
             </div>
           </div>
-          <div class="swiper-image" data-swiper-parallax-y="35%">
+          <div class="swiper-image" data-swiper-parallax-y="35%" style="transform: translate3d(0px, 0%, 0px); transition-duration: 0ms;">
             <div class="swiper-image-inner swiper-image-right swiper-image-two">
               <p class="paragraph">
                 A Prophet sat in the market-place and told the fortunes of all who cared to engage his services. Suddenly there came running up one who told him that his house had been broken into by thieves, and that they had made off with everything they could lay
@@ -888,14 +749,14 @@ button.swiper-pagination-bullet {
             </div>
           </div>
         </div>
-        <div class="swiper-slide swiper-slide-two">
-          <div class="swiper-image" data-swiper-parallax-y="-20%">
+        <div class="swiper-slide swiper-slide-two swiper-slide-next" data-swiper-slide-index="1" style="height: 394px;">
+          <div class="swiper-image" data-swiper-parallax-y="-20%" style="transform: translate3d(0px, 20%, 0px); transition-duration: 0ms;">
             <div class="swiper-image-inner swiper-image-left swiper-image-three">
               <h1>The <span class="emphasis">Drop</span>. <br><span>Of Eternal life.</span></h1>
               <p>Chapter II, page VII</p>
             </div>
           </div>
-          <div class="swiper-image" data-swiper-parallax-y="35%">
+          <div class="swiper-image" data-swiper-parallax-y="35%" style="transform: translate3d(0px, -35%, 0px); transition-duration: 0ms;">
             <div class="swiper-image-inner swiper-image-right swiper-image-four">
               <p class="paragraph">
                 A thirsty Crow found a Pitcher with some water in it, but so little was there that, try as she might, she could not reach it with her beak, and it seemed as though she would die of thirst within sight of the remedy.
@@ -903,14 +764,14 @@ button.swiper-pagination-bullet {
             </div>
           </div>
         </div>
-        <div class="swiper-slide swiper-slide-three">
-          <div class="swiper-image" data-swiper-parallax-y="-20%">
+        <div class="swiper-slide swiper-slide-three swiper-slide-duplicate-prev" data-swiper-slide-index="2" style="height: 394px;">
+          <div class="swiper-image" data-swiper-parallax-y="-20%" style="transform: translate3d(0px, 20%, 0px); transition-duration: 0ms;">
             <div class="swiper-image-inner swiper-image-left swiper-image-five">
               <h1>A <span class="emphasis">Sense</span>. <br><span>Of Things to Come.</span></h1>
               <p>Chapter III, page XI</p>
             </div>
           </div>
-          <div class="swiper-image" data-swiper-parallax-y="35%">
+          <div class="swiper-image" data-swiper-parallax-y="35%" style="transform: translate3d(0px, -35%, 0px); transition-duration: 0ms;">
             <div class="swiper-image-inner swiper-image-right swiper-image-six">
               <p class="paragraph">
                 Every man carries Two Bags about with him, one in front and one behind, and both are packed full of faults. The Bag in front contains his neighbours’ faults, the one behind his own. Hence it is that men do not see their own faults, but never fail to see
@@ -920,14 +781,33 @@ button.swiper-pagination-bullet {
           </div>
         </div>
 
-      </div>
-      <div class="swiper-pagination"></div>
+      <div class="swiper-slide swiper-slide-one swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" style="height: 394px;">
+          <div class="swiper-image" data-swiper-parallax-y="-20%" style="transform: translate3d(0px, 20%, 0px); transition-duration: 0ms;">
+            <div class="swiper-image-inner swiper-image-left swiper-image-one">
+              <h1>A <span class="emphasis">Breath</span>. <br><span>Of Fresh Air.</span></h1>
+              <p>Chapter I, page XV</p>
+            </div>
+          </div>
+          <div class="swiper-image" data-swiper-parallax-y="35%" style="transform: translate3d(0px, -35%, 0px); transition-duration: 0ms;">
+            <div class="swiper-image-inner swiper-image-right swiper-image-two">
+              <p class="paragraph">
+                A Prophet sat in the market-place and told the fortunes of all who cared to engage his services. Suddenly there came running up one who told him that his house had been broken into by thieves, and that they had made off with everything they could lay
+                hands on.
+              </p>
+            </div>
+          </div>
+        </div></div>
+      <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
     </div>
   </div>
 
 </div>
-      <script>
-    var mySwiper = new Swiper(".swiper-container", {
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-8216c69d01441f36c0ea791ae2d4469f0f8ff5326f00ae2d00e4bb7d20e24edb.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+      <script id="rendered-js">
+var mySwiper = new Swiper(".swiper-container", {
   direction: "vertical",
   loop: true,
   pagination: ".swiper-pagination",
@@ -937,10 +817,14 @@ button.swiper-pagination-bullet {
   parallax: true,
   autoplay: false,
   effect: "slide",
-  mousewheelControl: 1
-});
-  </script>
+  mousewheelControl: 1 });
+//# sourceURL=pen.js
+    </script>
 
-  </body>
   
-</html>
+
+
+
+
+ 
+</body></html>
